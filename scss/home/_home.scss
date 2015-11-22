@@ -1,0 +1,87 @@
+/* This is the SASS file used to generate CSS for the home screen */
+
+@import "../base/base";
+
+.home-props {
+	background: $global-theme-secondary-color;
+}
+
+.item-props {
+	margin: 0;
+	padding: 1px;
+}
+
+div {
+	&.home {
+		
+		margin: auto;
+
+		&.fixtures {
+			text-align: center;
+		}
+		
+		&.grid {
+
+			&.row {
+				padding: 0;
+			}
+
+			&.col {
+				background: $global-theme-secondary-color;
+				@extend %border-shadow-effect-top-bottom;
+				color: $global-theme-third-text-color;
+			}
+		}
+	}
+
+	&.item {
+		&.item-divider {
+			&.fixtures {
+				&.header {
+					background: $global-theme-third-color;
+				}
+			}
+		}
+	}
+
+	&.card.card-props {
+		@extend %border-shadow-effect-bottom;
+		border-top: solid 2px $global-theme-color;
+	}
+}
+
+span {
+	
+	@extend %app-text;
+	
+	&.fixture {
+		font-style: italic;
+		text-align: center;
+		font-weight: bold;
+
+		&.date {
+			float: left;
+			color: $global-theme-secondary-text-color;
+		}
+
+		&.time {
+			float: right;
+			color: $global-theme-secondary-text-color;
+		}
+
+		&.team {
+			font-weight: bold;
+		}
+
+		&.versus {
+			margin-top: 100px;
+			
+		}
+
+		&.score {
+			-webkit-box-shadow: 0 10px 6px -6px #777;
+	   		-moz-box-shadow: 0 10px 6px -6px #777;
+	        box-shadow: 0 10px 6px -6px #777;
+		}
+	}
+}

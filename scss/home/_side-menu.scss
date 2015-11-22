@@ -1,0 +1,36 @@
+/* This would style the side menu of the home page */
+
+@import "../base/base";
+
+ion-content {
+	&.side-menu {
+		background: $global-theme-third-color;
+		border-right: $global-theme-color solid 2px;
+	}
+}
+
+ion-item {
+	&.side-menu {
+		background: $global-theme-third-color;	
+		color: $global-theme-fifth-color;
+		border-bottom: transparent thin solid;
+		border-top: transparent thin solid;
+		padding: 3px;
+		margin-top : 7px;
+		font-size: 30px;
+		text-align: center;
+	}
+}
+
+h1 {
+	&.side-menu {
+		color: $global-theme-fifth-color;
+	}
+}
+
+span {
+	&.side-menu {
+		color: $global-theme-color;
+		margin-top : 0;
+	}
+}

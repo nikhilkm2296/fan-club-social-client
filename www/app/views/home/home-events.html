@@ -1,0 +1,25 @@
+<ion-view view-title="Events" class="home-events-props">
+  <ion-content has-subheader="false">
+    <ion-refresher
+      pulling-text="Pull to refresh..."
+      on-refresh="refreshAll()">
+    </ion-refresher>
+  	<div class="home events list">
+  	  <div class="card card-props" ng-repeat="event in events">
+  		<div class="home events item">
+  		  <h2 class="home events"> {{ event.name }} </h2>
+  		  <p class="home events headline-time">Date : {{event.eventDate | date:'medium'}}</p>
+  		</div>
+  		<div class="item item-body">
+  			<p class="home events description">
+  				{{ event.description }}
+  			</p>
+  		</div>
+  	</div>
+    <ion-infinite-scroll
+      ng-if="moreDataCanBeLoaded()" 
+      on-infinite="loadPage(links['next'])"
+      distance="1%">
+    </ion-infinite-scroll>
+  </ion-content>
+</ion-view>

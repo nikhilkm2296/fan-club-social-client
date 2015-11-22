@@ -1,0 +1,38 @@
+<ion-view title="Signup">
+  <ion-content class="has-header" scroll="false" padding="true">
+    <div class="logo-image">
+      <img ng-src="img/arsenal-bangalore.gif" width="100%">
+    </div>
+    <div class="account-form" name="form">
+      <label class="user-account-input item item-input">
+        <span class="input-label">Member Access Code</span>
+        <input placeholder="From your fan club" type="text" class="user-input" ng-model="registerAccount.accessCode">
+      </label>
+      <label class="user-account-input item item-input">
+        <span class="input-label">First Name</span>
+        <input placeholder="First Name" type="text" class="user-input" ng-model="registerAccount.firstName">
+      </label>
+      <label class="user-account-input item item-input">
+        <span class="input-label">Last Name</span>
+        <input placeholder="Last Name" type="text" class="user-input" ng-model="registerAccount.lastName">
+      </label>
+      <label class="user-account-input item item-input">
+        <span class="input-label">Email</span>
+        <input placeholder="Email ID" type="email" class="user-input" ng-model="registerAccount.email">
+      </label>
+      <label class="user-account-input item item-input">
+        <span class="input-label">Username</span>
+        <input placeholder="Login name" type="text" class="user-input" ng-model="registerAccount.login">
+      </label>
+      <label class="user-account-input item item-input">
+        <span class="input-label">Password</span>
+        <input placeholder="Login password" type="password" class="user-input" ng-model="registerAccount.password">
+      </label>
+      <label class="user-account-input item item-input">
+        <span class="input-label">Confirm Password</span>
+        <input placeholder="Confirm password" type="password" class="user-input" ng-model="confirmPassword.val">
+      </label>
+      <button class="account button button-block" ng-click="register()">Sign up</button>
+    </div>
+  </ion-content>
+</ion-view>

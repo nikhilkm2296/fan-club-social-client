@@ -1,0 +1,51 @@
+/* This scss file adds style to the Events page */
+
+@import "../base/base";
+
+.home-events-props {
+	background: $global-theme-secondary-color;
+}
+
+p {
+	&.home {
+		&.events {
+			&.description {
+				margin : 0;
+				color: $global-theme-third-color;
+			}
+		}
+
+		&.headline-time {
+			color: white;
+		}
+	}
+}
+
+h2 {
+	color: $global-theme-fifth-color;
+	font-style: italic;
+	&.home {
+		&.events {
+
+		}
+	}
+}
+
+div {
+	&.home {
+		margin: auto;
+
+		&.events {
+			text-align: center;
+
+			&.card.card-props {
+				@extend %border-shadow-effect-bottom;
+			}
+
+			&.item {
+				background: $global-theme-third-color;
+				padding: 2px;
+			}
+		}
+	}
+}

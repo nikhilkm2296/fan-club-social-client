@@ -1,0 +1,59 @@
+<ion-view view-title="Fixtures & Results" class="home-props">
+	<ion-content has-subheader="false">
+    <ion-refresher
+      pulling-text="Pull to refresh..."
+      on-refresh="refreshAll()">
+    </ion-refresher>
+    
+    <!-- The main page content for fixture screen -->
+    <div class="home fixtures list">
+
+      <!-- Card for each fixture -->
+      <div class="card card-props" ng-repeat="fixture in fixtures">
+
+        <!-- Header of the Card -->
+        <div class="item item-divider fixtures header">
+          <span class="fixture date">{{ fixture.matchFormattedTime }}</span>
+          <span class="fixture time"></span>
+        </div>
+
+        <!-- Content of the card -->
+        <div class="home row">
+          <div class="col col-40">
+            <span class="fixture team">{{ fixture.teamOne }}</span>
+          </div>
+          <div class="home col col-20"><span class="fixture versus">  v/s </span></div>
+          <div class="home col col-40">
+            <span class="fixture team">{{ fixture.teamTwo }}</span>
+          </div>
+        </div>
+
+        <!-- Footer of the card -->
+        <div class="item-props item item-divider" ng-show="isMatchLive(fixture)">
+          <div class="home grid row">
+            <div class="home grid col col-40">
+              <span class="fixture score"> {{ fixture.teamOneScore }} </span>
+            </div>
+            <div class="home grid col col-20">
+              <span class="fixture score"> {{ fixture.matchTime }} </span>
+            </div>
+            <div class="home grid col col-40">
+              <span class="fixture score"> {{ fixture.teamTwoScore }} </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer if match is not live -->
+        <div class="item-props item item-divider" ng-if="!isMatchLive(fixture)">
+          <span class="home fixture">Match yet to start...</span>
+        </div>
+      </div>
+    </div>
+    
+    <ion-infinite-scroll
+      ng-if="moreDataCanBeLoaded()" 
+      on-infinite="loadPage(links['next'])"
+      distance="1%">
+    </ion-infinite-scroll>
+	</ion-content>
+</ion-view>

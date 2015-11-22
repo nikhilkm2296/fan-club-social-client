@@ -1,0 +1,47 @@
+/* This page styles the login page of the FC social app */
+
+@import "../base/base";
+
+ion-view {
+	&.login-props {
+		background: $global-theme-secondary-color;
+	}
+}
+
+button {
+	&.account {
+		background: $global-theme-fifth-color;
+		border: solid thin $global-theme-fifth-color;
+		color: $global-theme-secondary-color;
+		opacity: 0.8;
+	}
+}
+
+div {
+	&.account-form {
+		margin-top: 40px;
+	}
+}
+
+%input-label {
+	color: $global-theme-fifth-color;
+}
+
+span {
+	&.input-label {
+		@extend %input-label;
+	}
+}
+
+input {
+	&.user-input {
+		@extend %input-label;
+	}
+}
+
+label {
+	&.user-account-input {
+		background: $global-theme-fourth-color;
+		color: $global-theme-fifth-color;
+	}
+}

@@ -1,0 +1,23 @@
+<ion-view style="" title="Login" class="login-props">
+    <ion-content class="has-header" padding="true">
+        <div class="logo-image">
+            <img ng-src="img/arsenal-bangalore.gif" width="100%">
+        </div>
+        <div class="account-form">
+            <label class="user-account-input item item-input">
+                <span class="input-label">Username</span>
+                <input type="text" placeholder="Login Name" class="user-input" ng-model="credentials.username">
+            </label>
+            <label class="user-account-input item item-input">
+                <span class="input-label">Password</span>
+                <input type="password" placeholder="Login Password" class="user-input" ng-model="credentials.password">
+            </label>
+            <button class="account button button-block" ng-click="login()">
+                Log in
+            </button>
+            <a class="button button-assertive button-clear button-block" href="#/signup">
+                Create an account
+            </a>
+        </div>
+    </ion-content>
+</ion-view>

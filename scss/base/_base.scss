@@ -1,0 +1,120 @@
+/* This defines some of the base styles used in the app */
+
+/* Currently pointing to Arsenal Bangalore color */
+
+/* This is red color */
+$global-theme-color: #D00002;
+$global-theme-text-color: #D00002;
+
+/* This is white color */
+$global-theme-secondary-color: #fff;
+$global-theme-secondary-text-color: #fff;
+
+/* This is the third variant dark bule-gray color */
+$global-theme-third-color: #15212F;
+$global-theme-third-text-color: #15212F;
+
+/* This is the fourth color. Light gray */
+$global-theme-fourth-color: #4A4D58;
+$global-theme-fourth-text-color: #4A4D58;
+
+/* Yellow color */
+$global-theme-fifth-color: #CDB040;
+$global-theme-fifth-text-color: #CDB040;
+
+%app-text {
+	font-size: 13px;
+	font-family: Helvetica;
+}
+
+%border-shadow-effect-top-bottom {
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+%border-shadow-effect-bottom {
+	-webkit-box-shadow: 0 10px 6px -6px $global-theme-fifth-color;
+	-moz-box-shadow: 0 10px 6px -6px $global-theme-fifth-color;
+	box-shadow: 0 10px 6px -6px $global-theme-fifth-color;	
+}
+
+/* Validation related css goes here */
+p {
+	&.validate {
+		color: red;
+    	font-weight: bold;
+    	font-style: italic;
+    	margin: 0 0 0px;
+    	text-align: center;
+    	background-color: #CDB040;
+    	opacity: 0.7;
+	}
+}
+
+/* Tabs related common properties */
+
+div {
+	&.tab-nav {
+		&.tabs {
+			border-top: solid thin $global-theme-color;
+			background: $global-theme-fourth-color;
+		}
+	}
+	&.popup-head {
+		color: $global-theme-fifth-color;
+		text-style: italic;
+	}
+}
+
+span {
+	&.tab-title {
+		color: $global-theme-fifth-text-color;
+	}
+}
+
+/* Tab icons related */
+i {
+	&.icon {
+		color: $global-theme-fifth-text-color;
+	}
+}
+
+/* Header bar for home */
+ion-header-bar {
+	&.home {
+		background: $global-theme-fourth-color;
+		border-bottom: solid thick $global-theme-color;
+	}
+}
+
+h1 {
+	&.home {
+		color: $global-theme-secondary-text-color;
+	}
+}
+
+/* Scroll-bar-indicator */
+div {
+
+	&.scroll-bar-indicator {
+		background: $global-theme-color;
+	}
+}
+
+/* Home header buttons */
+button {
+	&.button {
+		&.button-icon {
+			color: $global-theme-secondary-color;
+		}
+	}
+}
+
+a {
+	&.tab-item {
+		&.tab-item-active {
+			background: $global-theme-third-color;
+		}
+	}
+}

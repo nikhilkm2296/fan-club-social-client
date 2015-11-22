@@ -1,0 +1,29 @@
+<!--
+Create tabs with an icon and label, using the tabs-positive style.
+Each tab's child <ion-nav-view> directive will have its own
+navigation history that also transitions its views in and out.
+-->
+
+<ion-header-bar class="home">
+  <button class="button button-icon icon ion-navicon" ng-click="toggleLeftSideMenu()"></button>
+  <h1 class="home title"> Arsenal Bengaluru </h1>
+</ion-header-bar>
+
+<ion-tabs class="tabs-icon-top tabs-color-active-positive">
+
+  <!-- Feeds Tab -->
+  <ion-tab title="Feeds" icon-off="ion-ios-paper-outline" icon-on="ion-ios-paper" href="#/home/feeds">
+      <ion-nav-view name="home-feeds"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Fixtures Tab -->
+  <ion-tab title="Fixtures" icon-off="ion-ios-football-outline" icon-on="ion-ios-football" href="#/home/fixtures">
+      <ion-nav-view name="home-fixtures"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Events Tab -->
+  <ion-tab title="Events" icon-off="ion-ios-calendar-outline"  icon-on="ion-ios-calendar" href="#/home/events">
+      <ion-nav-view name="home-events"></ion-nav-view>
+  </ion-tab>
+</ion-tabs>
+

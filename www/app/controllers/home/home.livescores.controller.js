@@ -1,0 +1,1 @@
+home.livescores.controller.js

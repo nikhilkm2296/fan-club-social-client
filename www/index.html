@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="css/ionic.app.css" rel="stylesheet">
+    <link href="css/ionic.app.min.css" rel="stylesheet">
+
+    <!-- compiled css output -->
+    <link href="css/ionic.app.css" rel="stylesheet">
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="lib/ionic/js/angular/angular-resource.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="app/app.js"></script>
+    
+    <!-- Components used in the APP -->
+    <script src="app/components/auth/auth.service.js"></script>
+    <script src="app/components/auth/principal.service.js"></script>
+    <script src="app/components/auth/authority.directive.js"></script>
+    <script src="app/components/auth/services/account.service.js"></script>
+    <script src="app/components/auth/services/activate.service.js"></script>
+    <script src="app/components/auth/services/password.service.js"></script>
+    <script src="app/components/auth/services/register.service.js"></script>
+    <script src="app/components/form/form.directive.js"></script>
+    <script src="app/components/form/maxbytes.directive.js"></script>
+    <script src="app/components/form/minbytes.directive.js"></script>
+    <script src="app/components/form/pager.directive.js"></script>
+    <script src="app/components/form/pagination.directive.js"></script>
+    <script src="app/components/admin/audits.service.js"></script>
+    <script src="app/components/admin/logs.service.js"></script>
+    <script src="app/components/admin/configuration.service.js"></script>
+    <script src="app/components/admin/monitoring.service.js"></script>
+    <script src="app/components/interceptor/auth.interceptor.js"></script>
+    <script src="app/components/interceptor/errorhandler.interceptor.js"></script>
+    <script src="app/components/interceptor/notification.interceptor.js"></script>
+    <script src="app/components/navbar/navbar.directive.js"></script>
+    <script src="app/components/navbar/navbar.controller.js"></script>
+    <script src="app/components/user/user.service.js"></script>
+    <script src="app/components/util/truncate.filter.js"></script>
+    <script src="app/components/util/base64.service.js"></script>
+    <script src="app/components/util/capitalize.filter.js"></script>
+    <script src="app/components/alert/alert.service.js"></script>
+    <script src="app/components/alert/alert.directive.js"></script>
+    <script src="app/components/util/parse-links.service.js"></script>
+    <script src="app/components/util/dateutil.service.js"></script>
+    <script src="app/components/language/language.service.js"></script>
+    <script src="app/components/language/language.controller.js"></script>
+    <script src="app/components/auth/provider/auth.oauth2.service.js"></script>
+    <script src="app/components/entities/feed/feed.service.js"></script>
+    <script src="app/components/entities/event/event.service.js"></script>
+    <script src="app/components/entities/feedConfig/feedConfig.service.js"></script>
+    <script src="app/components/entities/fixtureConfig/fixtureConfig.service.js"></script>
+    <script src="app/components/entities/fixture/fixture.service.js"></script>
+    <script src="app/components/entities/fixtureEvent/fixtureEvent.service.js"></script>
+
+    <!-- Controllers & Services -->
+    <!-- Main app controller -->
+    <script src="app/controllers/app.controller.js"></script>
+
+    <!-- Account -->
+    <script src="app/controllers/account/login.controller.js"></script>
+    <script src="app/controllers/account/register.controller.js"></script>
+
+    <!-- Home -->
+    <script src="app/controllers/home/home.controller.js"></script>
+    <script src="app/services/home/home.service.js"></script>
+    <script src="app/controllers/home/home.feeds.controller.js"></script>
+    <script src="app/controllers/home/home.fixtures.controller.js"></script>
+    <script src="app/controllers/home/home.events.controller.js"></script>
+
+
+  </head>
+  <body ng-app="fc-social" ng-controller="AppCtrl">
+        <ion-side-menus>
+        <ion-side-menu-content drag-content="true">
+            <ion-nav-view></ion-nav-view>
+        </ion-side-menu-content>
+        <!-- The contents to be added to the side menu -->
+        <ion-side-menu side="left" width="75">
+            <ion-content class="side-menu">
+                <ion-list>
+                    <ion-item menu-close class="side-menu" ng-click="login()">
+                        <i class="icon ion-person"><br/>
+                            <span class="side-menu">Profile</span>
+                        </i>
+                    </ion-item>
+                    <ion-item menu-close class="side-menu" ng-click="logout()">
+                        <i class="icon ion-log-out"><br/>
+                            <span class="side-menu">Logout</span>
+                        </i>
+                    </ion-item>
+                </ion-list>
+            </ion-content>
+        </ion-side-menu>
+    </ion-side-menus>
+</body>
+</html>

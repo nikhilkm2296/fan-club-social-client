@@ -1,0 +1,27 @@
+<ion-view view-title="Feeds" class="home-feeds-props">
+  <ion-content has-subheader="false">
+    <ion-refresher
+      pulling-text="Pull to refresh..."
+      on-refresh="refreshAll()">
+    </ion-refresher>
+  	<div class="home feeds list">
+  	  <div class="card card-props" ng-repeat="feed in feeds">
+        <a class="feeds" href="{{ feed.link }}">
+      		<div class="home feeds item">
+      		  <h2 class="home feeds"> {{ feed.title }} </h2>
+      		  <p class="home feeds headline-time"> {{ feed.publicationDate }} </p>
+      		</div>
+      		<div class="item item-body">
+      			<p class="home feeds description">
+      				{{ feed.description }}
+      			</p>
+      		</div>
+        </a>
+  	</div>
+    <ion-infinite-scroll
+      ng-if="moreDataCanBeLoaded()" 
+      on-infinite="loadPage(links['next'])"
+      distance="1%">
+    </ion-infinite-scroll>
+  </ion-content>
+</ion-view>

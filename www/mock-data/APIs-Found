@@ -1,0 +1,13 @@
+Competitions:
+http://football-api.com/api/?Action=competitions&APIKey=50c83608-c9d0-8d2f-d43373530e31
+
+{"APIVersion":1,"APIRequestsRemaining":998,"DeveloperAuthentication":"TRUE","Competition":[{"id":"1204","name":"Premier League","region":"England"}],"Action":"competitions","Params":{"Action":"competitions","APIKey":"50c83608-c9d0-8d2f-d43373530e31"},"ComputationTime":0.010540962219238,"IP":"117.208.165.0","ERROR":"OK","ServerName":"Football-API","ServerAddress":"http:\/\/football-api.com\/api"}
+
+
+Standings
+http://football-api.com/api/?Action=standings&APIKey=50c83608-c9d0-8d2f-d43373530e31&comp_id=1204
+
+Fixtures
+http://football-api.com/api/?Action=fixtures&APIKey=50c83608-c9d0-8d2f-d43373530e31&comp_id=1204&&from_date=01.11.2015&to_date=30.11.2015
+
+http://football-api.com/api/?Action=fixtures&APIKey=50c83608-c9d0-8d2f-d43373530e31&comp_id=1204&&match_date=21.11.2015
